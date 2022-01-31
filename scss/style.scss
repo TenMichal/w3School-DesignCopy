@@ -16,22 +16,29 @@ body {
 .navbar {
     @include flex(row);
     justify-content: flex-start;
-    position: relative;
     width: 100%;
-    height: 75px;
+    height: 85px;
     background: #fff;
-    padding: 16px 0;
+    position: relative;
     .logo {
-        border: 1px solid black
+        margin: 0 15px;
+        padding: 0 16px;
+        img {
+            width: 50px;
+        }
     }
     .drop_menu {
+        height: 100%;
+        margin-right: 85px;
         ul {
+            height: 100%;
             list-style-type: none;
             font-size: 18px;
             @include flex(row);
-            gap: 20px;
+            gap: 25px;
             li {
-                padding: 24px 16px;
+                @include flex(row);
+                height: 100%;
                 &:hover {
                     a {
                         color: #fff;
@@ -42,7 +49,58 @@ body {
             a {
                 color: #000;
                 text-decoration: none;
-                font-weight: 600;
+                font-weight: 500;
+            }
+        }
+    }
+    .icon_menu {
+        height: 100%;
+        ul {
+            height: 100%;
+            list-style-type: none;
+            @include flex(row);
+            li {
+                padding: 8px 12px;
+                a {
+                    font-size: 22px;
+                    color: #000;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .buttons_menu {
+        @include flex(row);
+        gap: 10px;
+        .btn {
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 22px;
+            background: transparent;
+            &:hover {
+                background: $secondary-color;
+                color: #fff;
+            }
+            span {
+                padding: 8px 17px;
+            }
+            &.warning {
+                background: $warning-color;
+                &:hover {
+                    background: $primary-color;
+                    color: #fff;
+                }
+            }
+            &.success {
+                background: $primary-color;
+                color: #fff;
+                &:hover {
+                    background: $secondary-color;
+                }
             }
         }
     }
