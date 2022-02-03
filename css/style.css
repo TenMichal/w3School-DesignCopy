@@ -355,13 +355,7 @@ body {
   overflow: hidden;
 }
 
-.html {
-  background: #D9EEE1;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
-  height: 610px;
-  padding: 32px 0;
-  padding: 80px 0;
+.html, .css {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,14 +369,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-column-gap: 480px;
-     -moz-column-gap: 480px;
-          column-gap: 480px;
+  background: #D9EEE1;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  height: 610px;
+  padding: 80px 200px;
 }
-.html .content {
+.html .content, .css .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,14 +396,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.html .content .title {
+.html .content .title, .css .content .title {
   font-size: 100px;
 }
-.html .content .subtitle {
+.html .content .subtitle, .css .content .subtitle {
   font-size: 19px;
   margin-bottom: 30px;
 }
-.html .content .buttons {
+.html .content .buttons, .css .content .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +419,7 @@ body {
           flex-direction: column;
   row-gap: 25px;
 }
-.html .content .buttons .btn {
+.html .content .buttons .btn, .css .content .buttons .btn {
   width: 220px;
   height: 50px;
   border-radius: 25px;
@@ -428,15 +427,15 @@ body {
   font-size: 18px;
   font-weight: 500;
 }
-.html .content .buttons .btn.learn {
+.html .content .buttons .btn.learn, .css .content .buttons .btn.learn {
   background: #04AA6D;
   color: #fff;
 }
-.html .content .buttons .btn.video {
+.html .content .buttons .btn.video, .css .content .buttons .btn.video {
   background: #FFF4A3;
   position: relative;
 }
-.html .content .buttons .btn.video::before {
+.html .content .buttons .btn.video::before, .css .content .buttons .btn.video::before {
   position: absolute;
   font-size: 16px;
   top: -10px;
@@ -448,9 +447,104 @@ body {
   background: #FFC0C7;
   border-radius: 20px;
 }
-.html .content .buttons .btn.reference {
+.html .content .buttons .btn.reference, .css .content .buttons .btn.reference {
   background: #282A35;
   color: #fff;
+}
+.html .example, .css .example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  justify-content: center;
+  width: 630px;
+  padding: 32px 16px;
+  background: #E7E9EB;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.html .example h1, .css .example h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.html .example .example_code, .css .example .example_code {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-left: solid 5px #04AA6D;
+  margin: 16px 0;
+  padding: 8px 12px;
+}
+.html .example .example_code pre, .css .example .example_code pre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.html .example .example_code pre code, .css .example .example_code pre code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Inconsolata", monospace;
+}
+.html .example .example_code pre code span, .css .example .example_code pre code span {
+  font-family: "Inconsolata", monospace;
+  color: #A52A2A;
+}
+.html .example .example_code pre code span.red, .css .example .example_code pre code span.red {
+  color: #ff0000;
+}
+.html .example .btn, .css .example .btn {
+  padding: 8px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #04AA6D;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+}
+.html .example .btn:hover, .css .example .btn:hover {
+  background: #059862;
 }
 
 .css {
@@ -458,4 +552,42 @@ body {
           transform: translateY(-7px);
   background: #FFF4A3;
   height: 530px;
+}
+.css .example pre {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.css .example pre code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 1px solid red;
 }
