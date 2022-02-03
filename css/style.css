@@ -505,50 +505,6 @@ body {
   margin: 16px 0;
   padding: 8px 12px;
 }
-.html .example .example_code pre, .css .example .example_code pre, .javaScript .example .example_code pre, .python .example .example_code pre, .sql .example .example_code pre {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.html .example .example_code pre code, .css .example .example_code pre code, .javaScript .example .example_code pre code, .python .example .example_code pre code, .sql .example .example_code pre code {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  font-family: "Inconsolata", monospace;
-}
-.html .example .example_code pre code span, .css .example .example_code pre code span, .javaScript .example .example_code pre code span, .python .example .example_code pre code span, .sql .example .example_code pre code span {
-  font-family: "Inconsolata", monospace;
-  color: #A52A2A;
-}
-.html .example .example_code pre code span.red, .css .example .example_code pre code span.red, .javaScript .example .example_code pre code span.red, .python .example .example_code pre code span.red, .sql .example .example_code pre code span.red {
-  color: #ff0000;
-}
 .html .example .btn, .css .example .btn, .javaScript .example .btn, .python .example .btn, .sql .example .btn {
   padding: 8px 48px;
   font-size: 18px;
@@ -563,12 +519,82 @@ body {
   background: #059862;
 }
 
+.html .example_code.active {
+  background: #282C34;
+  border-color: transparent;
+}
+.html .example_code.active code {
+  font-size: 18px;
+  color: #fff;
+}
+.html .example_code.active code .arrow, .html .example_code.active code .tag, .html .example_code.active code .attribute {
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+}
+.html .example_code.active code span.arrow {
+  color: #69C2BB;
+}
+.html .example_code.active code span.tag {
+  color: #FF9999;
+}
+.html .example_code.active code span.attribute {
+  color: #BBA5C5;
+}
+.html code {
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+}
+.html code .arrow, .html code .tag, .html code .attribute {
+  font-family: "Inconsolata", monospace;
+}
+.html code span.arrow {
+  color: #0000CD;
+}
+.html code span.tag {
+  color: #AD2A2A;
+}
+.html code span.attribute {
+  color: #FF0000;
+}
+
 .css {
   background: #FFF4A3;
-  height: 530px;
 }
-.css .example .example_code pre code span {
-  border: 1px solid red;
+.css .example_code.active {
+  background: #282C34;
+  border-color: transparent;
+}
+.css .example_code.active code {
+  color: #fff;
+}
+.css .example_code.active code .arrow, .css .example_code.active code .tag, .css .example_code.active code .attribute {
+  font-family: "Inconsolata", monospace;
+}
+.css .example_code.active code span.value {
+  color: #69C2BB;
+}
+.css .example_code.active code span.property {
+  color: #BBA5C5;
+}
+.css .example_code.active code span.selector {
+  color: #FF9999;
+}
+.css code {
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+}
+.css code .value, .css code .property, .css code .selector {
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+}
+.css code span.value {
+  color: #0000CD;
+}
+.css code span.property {
+  color: #FF0000;
+}
+.css code span.selector {
+  color: #AD2A2A;
 }
 
 .javaScript {
@@ -599,12 +625,78 @@ body {
 .python .title {
   font-size: 70px !important;
 }
+.python .example_code.active {
+  background: #282C34;
+  border-color: transparent;
+}
+.python .example_code.active code {
+  color: #fff;
+}
+.python .example_code.active code .statement, .python .example_code.active code .int, .python .example_code.active code .string {
+  font-family: "Inconsolata", monospace;
+}
+.python .example_code.active code span.statement {
+  color: #BBA5C5;
+}
+.python .example_code.active code span.int {
+  color: #75B6FF;
+}
+.python .example_code.active code span.string {
+  color: #69C2BB;
+}
+.python code {
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+}
+.python code .statement, .python code .int, .python code .string {
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+}
+.python code span.statement {
+  color: #0000CD;
+}
+.python code span.int {
+  color: #FF0000;
+}
+.python code span.string {
+  color: #AD2A2A;
+}
 
 .sql {
   background: #96D4D4;
 }
 .sql .title {
   font-size: 70px !important;
+}
+.sql .example_code.active {
+  background: #282C34;
+  border-color: transparent;
+}
+.sql .example_code.active code {
+  color: #fff;
+}
+.sql .example_code.active code .selection, .sql .example_code.active code .instruction {
+  font-family: "Inconsolata", monospace;
+}
+.sql .example_code.active code span.selection {
+  color: #69C2BB;
+}
+.sql .example_code.active code span.instruction {
+  color: #BBA5C5;
+}
+.sql code {
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+}
+.sql code .selection, .sql code .instruction {
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+}
+.sql code span.selection {
+  color: #AD2A2A;
+}
+.sql code span.instruction {
+  color: #0000CD;
 }
 
 .library {

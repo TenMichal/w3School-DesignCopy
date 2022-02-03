@@ -297,22 +297,6 @@ body {
             border-left: solid 5px $primary-color;
             margin: 16px 0;
             padding: 8px 12px;
-            pre {
-                @include flex(column);
-                    align-items: flex-start;
-                code {
-                    @include flex(column);
-                    align-items: flex-start;
-                    font-family: 'Inconsolata', monospace;
-                    span {
-                        font-family: 'Inconsolata', monospace;
-                        color: #A52A2A;
-                        &.red {
-                            color: #ff0000;
-                        }
-                    }
-                }
-            }
         }
         .btn {
             padding: 8px 48px;
@@ -330,22 +314,82 @@ body {
     }
 }
 
+.html {
+    .example_code.active {
+        background: $code-dark-window;
+        border-color: transparent; 
+        code {
+            font-size: 18px;
+            color: #fff;
+            .arrow, .tag, .attribute {
+                font-size: 18px;
+                font-family: 'Inconsolata', monospace;
+            }
+            span.arrow {
+                color: $arrow-active-color;
+            }
+            span.tag {
+                color: $tag-active-color;
+            }
+            span.attribute {
+                color: $attribute-active-color;
+            }
+        }
+    }
+    code {
+        font-family: 'Inconsolata', monospace;
+        font-size: 18px;
+        .arrow, .tag, .attribute {
+            font-family: 'Inconsolata', monospace;
+        }
+        span.arrow {
+            color: $arrow-color;
+        }
+        span.tag {
+            color: $tag-color;
+        }
+        span.attribute {
+            color: $attribute-color;
+        }
+    }
+}
+
 .css {
     background: $css-color;
-    height: 530px;
-    .example {
-        
-        .example_code {
-            
-            pre {
-                
-                code {
-                    
-                    span {
-                        border: 1px solid red;
-                    }
-                }
+    .example_code.active {
+        background: $code-dark-window;
+        border-color: transparent; 
+        code {
+            color: #fff;
+            .arrow, .tag, .attribute {
+                font-family: 'Inconsolata', monospace;
             }
+            span.value {
+                color: $value-active-color;
+            }
+            span.property {
+                color: $property-active-color;
+            }
+            span.selector {
+                color: $selector-active-color;
+            }
+        }
+    }
+    code {
+        font-family: 'Inconsolata', monospace;
+        font-size: 18px;
+        .value, .property, .selector {
+            font-size: 18px;
+            font-family: 'Inconsolata', monospace;
+        }
+        span.value {
+            color: $value-color;
+        }
+        span.property {
+            color: $property-color;
+        }
+        span.selector {
+            color: $selector-color;
         }
     }
 }
@@ -379,12 +423,78 @@ body {
     .title {
         font-size: 70px !important;
     }
+    .example_code.active {
+        background: $code-dark-window;
+        border-color: transparent; 
+        code {
+            color: #fff;
+            .statement, .int, .string {
+                font-family: 'Inconsolata', monospace;
+            }
+            span.statement {
+                color: $statement-active-color;
+            }
+            span.int {
+                color: $int-active-color;
+            }
+            span.string {
+                color: $string-active-color;
+            }
+        }
+    }
+    code {
+        font-family: 'Inconsolata', monospace;
+        font-size: 18px;
+        .statement, .int, .string {
+            font-size: 18px;
+            font-family: 'Inconsolata', monospace;
+        }
+        span.statement {
+            color: $statement-color;
+        }
+        span.int {
+            color: $int-color;
+        }
+        span.string {
+            color: $string-color;
+        }
+    }
 }
 
 .sql {
     background: $sql-color;
     .title {
         font-size: 70px !important;
+    }
+    .example_code.active {
+        background: $code-dark-window;
+        border-color: transparent; 
+        code {
+            color: #fff;
+            .selection, .instruction {
+                font-family: 'Inconsolata', monospace;
+            }
+            span.selection {
+                color: $selection-active-color;
+            }
+            span.instruction {
+                color: $instruction-active-color;
+            }
+        }
+    }
+    code {
+        font-family: 'Inconsolata', monospace;
+        font-size: 18px;
+        .selection, .instruction {
+            font-size: 18px;
+            font-family: 'Inconsolata', monospace;
+        }
+        span.selection {
+            color: $selection-color;
+        }
+        span.instruction {
+            color: $instruction-color;
+        }
     }
 }
 

@@ -3,7 +3,45 @@ $secondary-color: #059862;
 $third-color: #D9EEE1;
 $body-color: #282A35;
 $warning-color: #FFC0C7;
+$code-dark-window: #282C34;
 $css-color: #FFF4A3;
 $js-color: #282A35;
 $python-color: #F3ECEA;
 $sql-color: #96D4D4; 
+
+// html colors
+$arrow-color: #0000CD;
+$tag-color: #AD2A2A;
+$attribute-color: #FF0000;
+
+$arrow-active-color: #69C2BB;
+$tag-active-color: #FF9999;
+$attribute-active-color: #BBA5C5;
+// css colors
+
+$value-color: #0000CD;
+$property-color: #FF0000;
+$selector-color: #AD2A2A;
+
+$value-active-color: #69C2BB;
+$property-active-color: #BBA5C5;
+$selector-active-color: #FF9999;
+// js colors
+
+// vars
+
+// python colors
+$statement-color: #0000CD;
+$string-color: #AD2A2A;
+$int-color: #FF0000;
+
+$statement-active-color: #BBA5C5;
+$string-active-color: #69C2BB;
+$int-active-color: #75B6FF;
+
+// sql colors
+$instruction-color: #0000CD;
+$selection-color: #AD2A2A;
+
+$instruction-active-color: #BBA5C5;
+$selection-active-color: #69C2BB;

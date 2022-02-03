@@ -71,24 +71,20 @@
         <div class="example">
             <h1>HTML Example:</h1>
             <div class="example_code">
-                <pre>
-                    <code>
-                        <label><span>&lt!DOCTYPE <span class="red">html</span>&gt</span></label>
-                        <label><span>&lthtml&gt</span></label>
-                        <label><span>&lttitle&gt</span>HTML Tutorial<span>&lt/title&gt</span></label>
-                        <label><span>&ltbody&gt</span></label>
+                <code>
+                    <span class="arrow">&lt</span><span class="tag">!DOCTYPE</span> <span class="attribute">html</span><span class="arrow">&gt</span> <br>
+                    <span class="arrow">&lt</span><span class="tag">html</span><span class="arrow">&gt</span> <br>
+                    <span class="arrow">&lt</span><span class="tag">title</span><span class="arrow">&gt</span>HTML Tutorial<span class="arrow">&lt</span><span class="tag">/title</span><span class="arrow">&gt</span> <br>
+                    <span class="arrow">&lt</span><span class="tag">body</span><span class="arrow">&gt</span> <br> <br>
                         
-                        <label style="visibility: hidden;">1</label>
 
-                        <label><span>&lth1&gt</span>This is a heading<span>&lt/h1&gt</span></label>
-                        <label><span>&ltp&gt</span>This is a paragraph.<span>&lt/p&gt</span></label>
+                    <span class="arrow">&lt</span><span class="tag">h1</span><span class="arrow">&gt</span>This is a heading<span class="arrow">&lt</span><span class="tag">/h1</span><span class="arrow">&gt</span> <br> 
+                    <span class="arrow">&lt</span><span class="tag">p</span><span class="arrow">&gt</span>This is a paragraph.<span class="arrow">&lt</span><span class="tag">/p</span><span class="arrow">&gt</span> <br> <br>
 
-                        <label style="visibility: hidden;">1</label>
 
-                        <label><span>&lt/body&gt</span></label>
-                        <label><span>&lt/html&gt</span></label>
-                    </code>
-                </pre>
+                    <span class="arrow">&lt</span><span class="tag">/body</span><span class="arrow">&gt</span> <br>
+                    <span class="arrow">&lt</span><span class="tag">/html</span><span class="arrow">&gt</span><br> <br>
+                </code>
             </div>
             <button class="btn">Try it Yourself</button>
         </div>
@@ -107,20 +103,16 @@
         <div class="example">
             <h1>CSS Example:</h1>
             <div class="example_code">
-                <pre>
-                    <code>
-                        <span>
-                          label body {
-                            background-color: lightblue;
-                          }
-                          
-                          h1 {
-                            color: white;
-                            text-align: center;
-                          }
-                        </span> 
-                    </code>
-                </pre>
+                <code>
+                    <span class="selector">body</span> { <br>
+                    &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">lightblue</span>; <br>
+                    } <br>
+                    <br>
+                    <span class="selector">h1</span> { <br>
+                    &nbsp;&nbsp;<span class="property">color</span>: <span class="value">white</span>; <br>
+                    &nbsp;&nbsp;<span class="property">text-align</span>: <span class="value">center</span>; <br>
+                    } <br>
+                </code>
             </div>
             <button class="btn">Try it Yourself</button>
         </div>
@@ -139,20 +131,13 @@
         <div class="example">
             <h1>javaScript Example:</h1>
             <div class="example_code">
-                <pre>
-                    <code>
-                        <span>
-
-                            
-                            function myFunction() {
-                              let x = document.getElementById("demo");
-                              x.style.fontSize = "25px";
-                              x.style.color = "red";
-                            }
-                            
-                        </span> 
-                    </code>
-                </pre>
+                <code>
+                    function myFunction() {
+                        let x = document.getElementById("demo");
+                        x.style.fontSize = "25px";
+                        x.style.color = "red";
+                    }
+                </code>
             </div>
             <button class="btn">Try it Yourself</button>
         </div>
@@ -171,14 +156,10 @@
         <div class="example">
             <h1>python Example:</h1>
             <div class="example_code">
-                <pre>
-                    <code>
-                        <span>
-                            if 5 > 2:
-                            print("Five is greater than two!")
-                        </span> 
-                    </code>
-                </pre>
+                <code>    
+                    <span class="statement">if</span> <span class="int">5</span>  > <span class="int">2</span>: <br>
+                    &nbsp;&nbsp;print(<span class="string">"Five is greater than two!"</span>)         
+                </code>
             </div>
             <button class="btn">Try it Yourself</button>
         </div>
@@ -197,13 +178,10 @@
         <div class="example">
             <h1>SQL Example:</h1>
             <div class="example_code">
-                <pre>
-                    <code>
-                        <span>
-                            SELECT * FROM Customers
-                            WHERE Country='Mexico';
-                        </span> 
-                    </code>
+                <code>                
+                    <span class="instruction">SELECT</span> * <span class="instruction">FROM</span> Customers <br>
+                    <span class="instruction">WHERE</span> Country=<span class="selection">'Mexico'</span>;
+                </code>
                 </pre>
             </div>
             <button class="btn">Try it Yourself</button>
@@ -211,5 +189,6 @@
     </section>
 
     <section class="library">1</section>
+    <script src="js/toggleCodeboxTheme.js"></script>
 </body>
 </html>
