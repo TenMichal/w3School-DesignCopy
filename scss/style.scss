@@ -3,7 +3,7 @@
 @import "variables";
 @import "mixins";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,6 +13,7 @@
 body {
     background: #fff;
     overflow-x: hidden;
+    @include flex(column)
 }
 
 .navbar {
@@ -215,14 +216,15 @@ body {
     overflow: hidden;
 }
 
-.html, .css {
+.html, .css, .javaScript, .python, .sql {
+    // transform: translateY(-7px);
     @include flex(row);
     justify-content: space-evenly;
     align-items: flex-start;
     background: $third-color;
-    transform: translateY(-7px);
-    height: 610px;
-    padding: 80px 200px;
+    height: auto;
+    width: 100%;
+    padding: 80px 100px;
     .content {
         @include flex(column);
         .title {
@@ -245,6 +247,9 @@ body {
                 &.learn{
                     background: $primary-color;
                     color: #fff;
+                    &:hover {
+                        background: $secondary-color;
+                    }
                 }
 
                 &.video{
@@ -287,6 +292,7 @@ body {
         .example_code {
             width: 100%;
             height: auto;
+            min-height: 200px;
             background: #fff;
             border-left: solid 5px $primary-color;
             margin: 16px 0;
@@ -325,19 +331,65 @@ body {
 }
 
 .css {
-    transform: translateY(-7px);
     background: $css-color;
     height: 530px;
     .example {
-        pre {
-            border: 1px solid red;
-            @include flex(column);
-            align-items: flex-start;
-            code {
-                @include flex(column);
-                align-items: flex-start;
-                border: 1px solid red;
+        
+        .example_code {
+            
+            pre {
+                
+                code {
+                    
+                    span {
+                        border: 1px solid red;
+                    }
+                }
             }
         }
     }
+}
+
+.javaScript {
+    .title {
+        font-size:80px !important;
+        color: #fff;
+    }
+    .subtitle {
+        color: #fff;
+    }
+    background: $js-color;
+    height: 530px;
+    .content {
+        .buttons {
+            color: #fff;
+            .btn.reference {
+                background: #fff;
+                color: #000; 
+                &:hover {
+                    background: rgb(207, 205, 205);
+                }
+            }
+        }
+    }
+}
+
+.python {
+    background: $python-color;
+    .title {
+        font-size: 70px !important;
+    }
+}
+
+.sql {
+    background: $sql-color;
+    .title {
+        font-size: 70px !important;
+    }
+}
+
+.library {
+    width: 100%;
+    height: 1000px;
+    background: $body-color
 }
