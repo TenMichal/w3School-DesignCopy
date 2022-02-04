@@ -361,14 +361,7 @@ body {
   color: #04AA6D;
 }
 
-.spacer {
-  aspect-ratio: 960/300;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-}
-
-.html, .css, .javaScript, .python, .sql {
+.box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +386,8 @@ body {
   width: 100%;
   padding: 80px 100px;
 }
-.html .content, .css .content, .javaScript .content, .python .content, .sql .content {
+.box .content {
+  width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,14 +402,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.html .content .title, .css .content .title, .javaScript .content .title, .python .content .title, .sql .content .title {
+.box .content .title {
   font-size: 100px;
 }
-.html .content .subtitle, .css .content .subtitle, .javaScript .content .subtitle, .python .content .subtitle, .sql .content .subtitle {
+.box .content .subtitle {
   font-size: 19px;
   margin-bottom: 30px;
 }
-.html .content .buttons, .css .content .buttons, .javaScript .content .buttons, .python .content .buttons, .sql .content .buttons {
+.box .content .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,7 +425,7 @@ body {
           flex-direction: column;
   row-gap: 25px;
 }
-.html .content .buttons .btn, .css .content .buttons .btn, .javaScript .content .buttons .btn, .python .content .buttons .btn, .sql .content .buttons .btn {
+.box .content .buttons .btn {
   width: 220px;
   height: 50px;
   border-radius: 25px;
@@ -439,18 +433,18 @@ body {
   font-size: 18px;
   font-weight: 500;
 }
-.html .content .buttons .btn.learn, .css .content .buttons .btn.learn, .javaScript .content .buttons .btn.learn, .python .content .buttons .btn.learn, .sql .content .buttons .btn.learn {
+.box .content .buttons .btn.learn {
   background: #04AA6D;
   color: #fff;
 }
-.html .content .buttons .btn.learn:hover, .css .content .buttons .btn.learn:hover, .javaScript .content .buttons .btn.learn:hover, .python .content .buttons .btn.learn:hover, .sql .content .buttons .btn.learn:hover {
+.box .content .buttons .btn.learn:hover {
   background: #059862;
 }
-.html .content .buttons .btn.video, .css .content .buttons .btn.video, .javaScript .content .buttons .btn.video, .python .content .buttons .btn.video, .sql .content .buttons .btn.video {
+.box .content .buttons .btn.video {
   background: #FFF4A3;
   position: relative;
 }
-.html .content .buttons .btn.video::before, .css .content .buttons .btn.video::before, .javaScript .content .buttons .btn.video::before, .python .content .buttons .btn.video::before, .sql .content .buttons .btn.video::before {
+.box .content .buttons .btn.video::before {
   position: absolute;
   font-size: 16px;
   top: -10px;
@@ -462,11 +456,11 @@ body {
   background: #FFC0C7;
   border-radius: 20px;
 }
-.html .content .buttons .btn.reference, .css .content .buttons .btn.reference, .javaScript .content .buttons .btn.reference, .python .content .buttons .btn.reference, .sql .content .buttons .btn.reference {
+.box .content .buttons .btn.reference {
   background: #282A35;
   color: #fff;
 }
-.html .example, .css .example, .javaScript .example, .python .example, .sql .example {
+.box .example {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,11 +486,11 @@ body {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
 }
-.html .example h1, .css .example h1, .javaScript .example h1, .python .example h1, .sql .example h1 {
+.box .example h1 {
   font-size: 24px;
   font-weight: 400;
 }
-.html .example .example_code, .css .example .example_code, .javaScript .example .example_code, .python .example .example_code, .sql .example .example_code {
+.box .example .example_code {
   width: 100%;
   height: auto;
   min-height: 200px;
@@ -505,7 +499,7 @@ body {
   margin: 16px 0;
   padding: 8px 12px;
 }
-.html .example .btn, .css .example .btn, .javaScript .example .btn, .python .example .btn, .sql .example .btn {
+.box .example .btn {
   padding: 8px 48px;
   font-size: 18px;
   font-weight: 600;
@@ -515,7 +509,7 @@ body {
   outline: none;
   border-radius: 25px;
 }
-.html .example .btn:hover, .css .example .btn:hover, .javaScript .example .btn:hover, .python .example .btn:hover, .sql .example .btn:hover {
+.box .example .btn:hover {
   background: #059862;
 }
 
@@ -599,24 +593,73 @@ body {
 
 .javaScript {
   background: #282A35;
-  height: 530px;
+  color: #fff;
 }
 .javaScript .title {
-  font-size: 80px !important;
-  color: #fff;
+  font-size: 70px !important;
+  margin-bottom: 10px;
 }
-.javaScript .subtitle {
-  color: #fff;
+.javaScript .buttons .btn.reference {
+  color: #000 !important;
+  background: #E7E9EB !important;
 }
-.javaScript .content .buttons {
-  color: #fff;
+.javaScript .example h1 {
+  color: #000 !important;
 }
-.javaScript .content .buttons .btn.reference {
-  background: #fff;
-  color: #000;
+.javaScript .example_code.active {
+  background: #282C34;
+  border-color: transparent;
 }
-.javaScript .content .buttons .btn.reference:hover {
-  background: #cfcdcd;
+.javaScript .example_code.active code {
+  color: #fff !important;
+}
+.javaScript .example_code.active code .arrow, .javaScript .example_code.active code .tag, .javaScript .example_code.active code .attribute, .javaScript .example_code.active code .property, .javaScript .example_code.active code .keyword, .javaScript .example_code.active code .value {
+  font-family: "Inconsolata", monospace;
+}
+.javaScript .example_code.active code span.arrow {
+  color: #69C2BB;
+}
+.javaScript .example_code.active code span.tag {
+  color: #FF9999;
+}
+.javaScript .example_code.active code span.attribute {
+  color: #BBA5C5;
+}
+.javaScript .example_code.active code span.property {
+  color: #69C2BB;
+}
+.javaScript .example_code.active code span.keyword {
+  color: #BBA5C5;
+}
+.javaScript .example_code.active code span.value {
+  color: #69C2BB;
+}
+.javaScript code {
+  color: #000 !important;
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+}
+.javaScript code .arrow, .javaScript code .tag, .javaScript code .attribute, .javaScript code .property, .javaScript code .keyword, .javaScript code .value {
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+}
+.javaScript code span.arrow {
+  color: #0000CD;
+}
+.javaScript code span.tag {
+  color: #AD2A2A;
+}
+.javaScript code span.attribute {
+  color: #FF0000;
+}
+.javaScript code span.property {
+  color: #0000CD;
+}
+.javaScript code span.keyword {
+  color: #0000CD;
+}
+.javaScript code span.value {
+  color: #AD2A2A;
 }
 
 .python {
@@ -708,6 +751,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
   place-items: center;
 }
 .libraries .library {
@@ -735,9 +779,12 @@ body {
 }
 .libraries .library .title {
   font-size: 45px;
+  margin-bottom: 20px;
 }
 .libraries .library .subtitle {
   font-size: 18px;
+  color: #3A3A3A;
+  margin-bottom: 16px;
 }
 .libraries .library .btn {
   width: 200px;
@@ -758,4 +805,13 @@ body {
 }
 .libraries .library.java {
   background: #F3ECEA;
+}
+.libraries .library.cpp {
+  background: #D9EEE1;
+}
+.libraries .library.w3css {
+  background: #96D4D4;
+}
+.libraries .library.bootstrap {
+  background: #E7E9EB;
 }
